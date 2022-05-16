@@ -1,4 +1,4 @@
-const moves = ["Rock", "Paper", "Scissors"];
+const moves = ["rock", "paper", "scissors"];
 
 function computerPlay() {
     return Math.floor(Math.random() * (Math.floor(2) - Math.ceil(0) + 1) + 0);
@@ -13,14 +13,14 @@ function playRound(pSelect, cSelect) {
         if (cSelect === 1) {
             return "You Win"
         } else {
-            pSelect === 2 ? "You Lose" : "You Win"
+            return pSelect === 2 ? "You Lose" : "You Win"
         }
     }
     else {
         if (pSelect === 1) {
             return "You Lose"
         } else {
-            cSelect === 1 ? "You Lose" : "You Win"
+            return cSelect === 1 ? "You Lose" : "You Win"
         }
     }
 }
