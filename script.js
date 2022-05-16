@@ -24,6 +24,14 @@ function playRound(pSelect, cSelect) {
         }
     }
 }
-const pSelect = moves.indexOf("Rock");
-const cSelect = computerPlay();
-console.log(playRound(pSelect, cSelect));
+
+
+for (let i = 0; i < 5; i++) {
+    // your code here!
+    const pSelect = moves.indexOf("Rock");
+    const cSelect = computerPlay();
+    playRound(pSelect, cSelect)
+    console.log(playRound(pSelect, cSelect));
+    
+}
+let score = 0;
