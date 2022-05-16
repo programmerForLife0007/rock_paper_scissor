@@ -1,32 +1,29 @@
+const moves = ["Rock", "Paper", "Scissors"];
+
 function computerPlay() {
-    const moves = ["Rock", "Paper", "Scissors"];
-    function getRandomInteger(min, max) {
-        return Math.floor(Math.random() * (Math.floor(max) - Math.ceil(min) + 1) + min);
-    };
-    return moves[getRandomInteger(0, 2)];
-}
+    return Math.floor(Math.random() * (Math.floor(2) - Math.ceil(0) + 1) + 0);
+};
 
-console.log(computerPlay())
 
-function playRound(playerSelection, computerSelection) {
-    if (playerSelection===computerSelection){
+function playRound(pSelect, cSelect) {
+    if (pSelect === cSelect) {
         return "Draw";
     }
-    else if (playerSelection>computerSelection){
-        if(computerSelection===1){
+    else if (pSelect > cSelect) {
+        if (cSelect === 1) {
             return "You Win"
-        }else{
-            if(playerSelection===2){return "You Lose"}else{return "You Win"}
+        } else {
+            pSelect === 2 ? "You Lose" : "You Win"
         }
     }
     else {
-        if(playerSelection===1){
+        if (pSelect === 1) {
             return "You Lose"
-        }else{
-            if(computerSelection===1){
-                return "You Lose"
-            }else{return "You Win"}
+        } else {
+            cSelect === 1 ? "You Lose" : "You Win"
         }
     }
 }
-console.log(playRound(0,0));
+const pSelect = moves.indexOf("Rock");
+const cSelect = computerPlay();
+console.log(playRound(pSelect, cSelect));
